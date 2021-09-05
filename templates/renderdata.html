@@ -10,15 +10,19 @@
     </style>
   </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-    <a class="navbar-brand" href="#">RSS FEEDER</a>
-  </div>
+<nav>
+    <label class="logo">RSS FEEDER</label>
+    <ul>
+        <li><a class= "active" herf="#">Home</a></li>
+        <li><a class= "active" herf="#">About</a></li>
+        <li><a class= "active" herf="#">Contact</a></li>
+    </ul>
 </nav>
+
 <div class="row">
 {% for item in data.entries %}
 
-        <div class='col-md-3'>
+        <div class='col-md-4'>
             <div class="card">
 <!--  <img class="card-img-top" src="..." alt="Card image cap">-->
                 <div class="card-body">
@@ -27,7 +31,7 @@
                     <a href="{{item.links[0].href}}" class="btn btn-primary">Visit Article</a>
                 </div>
             </div>
-            </div>
+        </div>
 {% endfor %}
 
     </div>
